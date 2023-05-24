@@ -1,7 +1,15 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NativeStackNavigationProp, createNativeStackNavigator } from "@react-navigation/native-stack";
+import { CreateAccount } from "@screens/CreateAccount";
 import { Login } from "@screens/Login";
 
 const { Navigator, Screen } = createNativeStackNavigator();
+
+type StackNavigation = {
+  login: undefined;
+  account: undefined;
+}
+
+export type StackTypes =  NativeStackNavigationProp<StackNavigation>;
 
 function AppRoutes() {
   return (
@@ -10,10 +18,10 @@ function AppRoutes() {
         name="login"
         component={Login}
       />
-      {/* <Screen
-        name="dashboard"
-        component={Home}
-      /> */}
+      <Screen
+        name="account"
+        component={CreateAccount}
+      />
     </Navigator>
   );
 }

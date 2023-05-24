@@ -1,8 +1,17 @@
 import { KeyboardAvoidingView, View, Image, Text, TextInput, TouchableOpacity } from "react-native";
-import { Title } from "@components/Title";
 import styles from "./styles";
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { StackTypes } from "@routes/app.routes";
+import { Title } from "@components/Title";
 
 export const Login = () => {
+  const navigation = useNavigation<StackTypes>();
+
+  const entrar = () => {
+    navigation.navigate("account");
+  }
+
   return (
     <KeyboardAvoidingView style={styles.backgroudContainer}>
 
@@ -32,11 +41,16 @@ export const Login = () => {
             placeholder="Digite sua senha"
           />
 
-          <TouchableOpacity style={styles.btnSubmit}>
+          <TouchableOpacity
+            style={styles.btnSubmit}
+          >
             <Text style={styles.textSubmit}>Entrar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.btnRegister}>
+          <TouchableOpacity
+            style={styles.btnRegister}
+            onPress={() => entrar()}
+          >
             <Text>Criar conta gratuita</Text>
           </TouchableOpacity>
         </View>
