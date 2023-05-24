@@ -41,6 +41,12 @@ export default StyleSheet.create({
     width: '80%',
     marginTop: '10%',
   },
+  pratosSection: {
+    width: '100%',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   TextPratos: {
     fontSize: 14,
     color: '#FFF',

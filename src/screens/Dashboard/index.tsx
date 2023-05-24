@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TextInput, Image } from "react-native";
 import styles from "./styles";
+import { Cards } from "@components/Cards";
 
 export const Dashboard = () => {
   return (
@@ -24,8 +25,11 @@ export const Dashboard = () => {
       <View style={styles.pratosContainer}>
         <Text style={styles.TextPratos}>Comidas populares</Text>
 
-        <View style={styles.pratosContainer}>
-          <Text style={styles.TextPratos}>card</Text>
+        <View style={styles.pratosSection}>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+          <Cards/>
         </View>
       </View>
     </View>
