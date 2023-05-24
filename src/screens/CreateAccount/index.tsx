@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@screens/CreateAccount/styles";
+import styles from "./styles";
 import { KeyboardAvoidingView, View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import { TitleAccount } from "@components/TitleAccount";
 import { useNavigation } from "@react-navigation/native";
@@ -9,7 +9,7 @@ export const CreateAccount = () => {
   const navigation = useNavigation<StackTypes>();
 
   const finalizarCadastro = () => {
-    // navigation.navigate("account");
+    navigation.navigate("dashboard");
   }
 
   return(
@@ -41,6 +41,7 @@ export const CreateAccount = () => {
             placeholder="joaopedro@email.com"
             autoCorrect={false}
           />
+
           <Text>Senha</Text>
           <TextInput
             style={styles.input}
