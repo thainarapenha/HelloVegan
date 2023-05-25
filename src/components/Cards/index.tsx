@@ -10,14 +10,6 @@ export const Cards = () => {
           source={require("@assets/img/prato.png")}
         />
       <Text style={styles.TextTitle}>Macarronada</Text>
-
-      <View style={styles.priceContainer}>
-        <Text style={styles.TextPrice}>R$ 10,00</Text>
-        <Image
-          style={styles.imgAdd}
-          source={require("@assets/img/add.png")}
-        />
-      </View>
     </View>
   );
 }

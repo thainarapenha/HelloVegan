@@ -8,13 +8,19 @@ import { Title } from "@components/Title";
 export const Login = () => {
   const navigation = useNavigation<StackTypes>();
 
-  const entrar = () => {
-    navigation.navigate("account");
+  const EnterAccount = () => {
+    navigation.navigate('account');
+  }
+
+  const EnterLogin = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "dashboard" }]
+    })
   }
 
   return (
     <KeyboardAvoidingView style={styles.backgroudContainer}>
-
       <View style={styles.containerLogo}>
         <Image
           source={require("@assets/img/banner.jpg")}
@@ -22,10 +28,9 @@ export const Login = () => {
       </View>
 
       <View style={styles.backgroudContainer}>
-
         <View style={styles.Container}>
           <View style={styles.titleContainer}>
-            <Title />
+            <Title title={"Hello"} titleSpan={"Vegan!"} />
           </View>
 
           <Text>E-mail</Text>
@@ -34,6 +39,7 @@ export const Login = () => {
             placeholder="exemplo@email.com"
             autoCorrect={false}
           />
+
           <Text>Senha</Text>
           <TextInput
             style={styles.input}
@@ -43,13 +49,14 @@ export const Login = () => {
 
           <TouchableOpacity
             style={styles.btnSubmit}
+            onPress={() => EnterLogin()}
           >
             <Text style={styles.textSubmit}>Entrar</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.btnRegister}
-            onPress={() => entrar()}
+            onPress={() => EnterAccount()}
           >
             <Text>Criar conta gratuita</Text>
           </TouchableOpacity>

@@ -1,17 +1,25 @@
-import { View, Text, Image } from "react-native";
+import React from "react";
+import { Image } from "react-native";
 import styles from "./styles";
+import { ContainerView, TaskTitle, TaskTitleSpan }  from './styles';
 
-export const Title = () => {
+interface TaskTitleProps {
+  title: string;
+  titleSpan: string;
+}
+
+export const Title: React.FC<TaskTitleProps> = ({title, titleSpan}) => {
   return(
-    <View style={styles.TitleContainer}>
+    <ContainerView>
       <Image
         style={styles.img}
         source={require("@assets/img/plant.png")}
       />
-      <Text style={styles.textTitle}>
-        Hello
-        <Text style={styles.textSpan}>Vegan!</Text>
-      </Text>
-    </View>
+      
+      <TaskTitle>
+        {title}
+        <TaskTitleSpan>{titleSpan}</TaskTitleSpan>
+      </TaskTitle>
+    </ContainerView>
   );
 }

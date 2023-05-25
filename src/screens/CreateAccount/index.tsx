@@ -1,20 +1,22 @@
 import React from "react";
 import styles from "./styles";
 import { KeyboardAvoidingView, View, Text, Image, TextInput, TouchableOpacity } from "react-native";
-import { TitleAccount } from "@components/TitleAccount";
 import { useNavigation } from "@react-navigation/native";
 import { StackTypes } from "@routes/app.routes";
+import { Title } from "@components/Title";
 
 export const CreateAccount = () => {
   const navigation = useNavigation<StackTypes>();
 
   const finalizarCadastro = () => {
-    navigation.navigate("dashboard");
+    navigation.reset({
+      index: 0,
+      routes: [{name: "dashboard"}]
+    })
   }
 
   return(
     <KeyboardAvoidingView style={styles.mainContainer}>
-
       <View style={styles.containerLogo}>
         <Image
           source={require("@assets/img/banner.jpg")}
@@ -22,10 +24,9 @@ export const CreateAccount = () => {
       </View>
 
       <View style={styles.mainContainer}>
-
         <View style={styles.Container}>
           <View style={styles.titleContainer}>
-            <TitleAccount />
+            <Title title={"Vamos criar sua "} titleSpan={"Conta!"} />
           </View>
 
           <Text>Nome completo</Text>
