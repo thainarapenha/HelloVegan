@@ -28,14 +28,12 @@ export const Dashboard = () => {
           <Text style={styles.TextPratos}>Comidas populares</Text>
 
           <View style={styles.pratosSection}>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
           </View>
         </View>
       </View>

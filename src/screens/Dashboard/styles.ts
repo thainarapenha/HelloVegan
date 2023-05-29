@@ -1,4 +1,10 @@
 import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
+
+export const ModalContainer = styled.View`
+  background-color: #F0F0F0;
+  flex: 1;
+`;
 
 export default StyleSheet.create({
   mainContainer: {
