@@ -3,14 +3,15 @@ import { View, Text, TextInput, Image } from "react-native";
 import styles from "./styles";
 import { Cards } from "@components/Cards";
 import { ScrollView } from "react-native-gesture-handler";
+import { UserIcon } from "@components/UserIcon";
 
 export const Dashboard = () => {
   return (
     <ScrollView>
       <View style={styles.mainContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.TextPage}>Descubra receitas que combinam</Text>
-          <Text style={styles.TextPage}>com seu estilo de vida</Text>
+          <Text style={styles.TextPage}>Descubra receitas que combinam com seu estilo de vida</Text>
+          <UserIcon/>
         </View>
 
         <View style={styles.searchContainer}>

@@ -16,10 +16,14 @@ export default StyleSheet.create({
     width: '100%',
   },
   titleContainer : {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
     marginTop: '15%',
-    width: '80%',
+    width: '90%',
   },
   TextPage: {
+    width: '90%',
     fontSize: 20,
     color: '#FFF',
   },
@@ -28,7 +32,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: '10%',
-    width: '80%',
+    width: '90%',
   },
   input : {
     width: '80%',
@@ -46,7 +50,7 @@ export default StyleSheet.create({
     backgroundColor: 'orange',
   },
   pratosContainer: {
-    width: '80%',
+    width: '90%',
     marginTop: '10%',
   },
   pratosSection: {

@@ -2,6 +2,7 @@ import { NativeStackNavigationProp, createNativeStackNavigator } from "@react-na
 import { CreateAccount } from "@screens/CreateAccount";
 import { Dashboard } from "@screens/Dashboard";
 import { Login } from "@screens/Login";
+import { UserAccount } from "@screens/UserAccount";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -9,6 +10,7 @@ type StackNavigation = {
   login: undefined;
   account: undefined;
   dashboard: undefined;
+  user: undefined;
 }
 
 export type StackTypes =  NativeStackNavigationProp<StackNavigation>;
@@ -27,6 +29,10 @@ function AppRoutes() {
       <Screen
         name="dashboard"
         component={Dashboard}
+      />
+      <Screen
+        name="user"
+        component={UserAccount}
       />
     </Navigator>
   );
