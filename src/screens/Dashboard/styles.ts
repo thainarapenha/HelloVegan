@@ -42,13 +42,6 @@ export default StyleSheet.create({
     padding: 10,
     backgroundColor: '#F0F0F0',
   },
-  imgFilter: {
-    width: 30,
-    height: 30,
-    padding: 20,
-    borderRadius: 4,
-    backgroundColor: 'orange',
-  },
   pratosContainer: {
     width: '90%',
     marginTop: '10%',

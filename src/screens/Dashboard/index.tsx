@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, TextInput, Image } from "react-native";
+import { View, Text, TextInput } from "react-native";
 import styles from "./styles";
 import { Cards } from "@components/Cards";
 import { ScrollView } from "react-native-gesture-handler";
 import { UserIcon } from "@components/UserIcon";
+import { Filter } from "@components/Filter";
 
 export const Dashboard = () => {
   return (
@@ -19,10 +20,7 @@ export const Dashboard = () => {
             style={styles.input}
             placeholder="Search..."
           />
-          <Image
-            style={styles.imgFilter}
-            source={require("@assets/img/filtro.png")}
-          />
+          <Filter/>
         </View>
 
         <View style={styles.pratosContainer}>
