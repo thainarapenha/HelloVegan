@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Text, Image, Button } from "react-native";
 import styles, { ContainerView } from "./styles";
-
+import { useNavigation } from "@react-navigation/native";
+import { StackTypes } from "@routes/app.routes";
 
 export const Cards = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const navigation = useNavigation<StackTypes>();
+
+  const OpenDetails = () => {
+    navigation.navigate('details')
+  }
 
   return (
     <ContainerView>
@@ -18,7 +23,7 @@ export const Cards = () => {
 
       <Button
         title="Ver mais"
-        onPress={() => setIsOpen(!isOpen)}
+        onPress={() => OpenDetails()}
       />
       
     </ContainerView>
